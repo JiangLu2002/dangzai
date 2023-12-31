@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #danzai {
+      width: 100%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="danzai"></canvas>
+  <script>
+    let danzai = document.querySelector('#danzai')
+    let dz = danzai.getContext("2d");
+    //蛋仔的身体
+    dz.beginPath()
+    dz.arc(125, 70, 70, 0, 2 * Math.PI);
+    dz.strokeStyle = '#f5c638';
+    dz.fillStyle = '#f5c638';
+    dz.stroke();
+    dz.fill()
+    dz.closePath()
+    //蛋仔的脸
+    dz.beginPath()
+    dz.arc(125, 70, 50, 0, 2 * Math.PI);
+    dz.strokeStyle = '#FAEBD7';
+    dz.fillStyle = '#FAEBD7';
+    dz.stroke();
+    dz.fill()
+    dz.closePath()
+    //蛋仔的眼睛
+    dz.beginPath();
+    dz.arc(100, 50, 5, 0, 2 * Math.PI);
+    dz.strokeStyle = 'black';
+    dz.fillStyle = 'black';
+    dz.fill()
+    dz.closePath()
+    dz.stroke();
+    dz.beginPath();
+    dz.arc(150, 50, 5, 0, 2 * Math.PI);
+    dz.strokeStyle = 'black';
+    dz.fillStyle = 'black';
+    dz.fill()
+    dz.closePath()
+    dz.stroke();
+    //蛋仔的嘴巴
+    dz.beginPath()
+    dz.moveTo(120, 60);
+    dz.lineTo(130, 60);
+    dz.strokeStyle = 'black';
+    dz.closePath()
+    dz.stroke();
+    //蛋仔的腮红
+    dz.beginPath();
+    var radial = dz.createRadialGradient(90, 75, 2, 100, 75, 12);
+    radial.addColorStop(0, '#FFDAB9');
+    radial.addColorStop(0.5, '#FFDAB9');
+    // 颜色值 #FF0188 == rgba(255,1,136,1)
+    radial.addColorStop(1, 'rgba(255 ,218 ,185,0)');
+    dz.fillStyle = radial;
+    dz.fillRect(0, 0, 500, 500);
+    dz.closePath()
+    dz.beginPath();
+    var radial2 = dz.createRadialGradient(140, 75, 2, 150, 75, 12);
+    radial2.addColorStop(0, '#FFDAB9');
+    radial2.addColorStop(0.5, '#FFDAB9');
+    // 颜色值 #FF0188 == rgba(255,1,136,1)
+    radial2.addColorStop(1, 'rgba(255 ,218 ,185,0)');
+    dz.fillStyle = radial2;
+    dz.fillRect(0, 0, 500, 500);
+    dz.closePath()
+
+
+
+
+
+  </script>
+</body>
+
+</html>
